@@ -1,97 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BloodConnect | Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .left-panel-gradient {
+            background: linear-gradient(180deg, #b91c1c 0%, #1e3a8a 60%, #020617 100%);
+        }
+    </style>
 </head>
+<script src="script.js"></script>
 <body class="bg-slate-50 min-h-screen">
 
-    <nav class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center gap-2">
-            <i class="fas fa-droplet text-red-600 text-2xl"></i>
-            <h1 class="text-xl font-black text-gray-800 uppercase tracking-tighter">BloodConnect</h1>
-        </div>
-        <div class="flex items-center gap-4">
-            <span class="text-sm font-bold text-gray-500 hidden md:block uppercase tracking-widest">Donor Dashboard</span>
-            <a href="index.html" class="text-red-600 font-bold hover:underline text-sm">Logout</a>
-        </div>
-    </nav>
-
-    <main class="max-w-4xl mx-auto mt-10 p-4">
+    <div class="flex flex-col md:flex-row min-h-screen">
         
-        <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 flex flex-col md:flex-row justify-between items-center mb-8">
-            <div class="flex items-center gap-6">
-                <div class="h-20 w-20 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-3xl font-bold">
-                    JD
+        <aside class="left-panel-gradient md:w-80 w-full p-8 text-white flex flex-col justify-between">
+            <div>
+                <div class="flex items-center gap-3 mb-10">
+                    <i class="fas fa-droplet text-3xl"></i>
+                    <h1 class="text-2xl font-black tracking-tighter uppercase">BloodConnect</h1>
                 </div>
-                <div>
-                    <h2 class="text-2xl font-black text-gray-800">Welcome, John Doe</h2>
-                    <p class="text-gray-500 font-medium">Donor ID: #BC-98210</p>
-                </div>
-            </div>
-            <div class="mt-4 md:mt-0 px-6 py-2 bg-green-100 text-green-700 rounded-full font-bold text-sm uppercase">
-                Eligible to Donate
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-                <h3 class="text-sm font-black text-gray-400 uppercase tracking-widest mb-6">Basic Information</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-500">Blood Group</span>
-                        <span class="font-black text-red-600 text-lg">O-Positive</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-500">Age</span>
-                        <span class="font-bold text-gray-800">28 Years</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-500">Sex</span>
-                        <span class="font-bold text-gray-800">Male</span>
-                    </div>
+                
+                <div class="space-y-6">
+                    <nav class="space-y-4">
+                        <a href="#" class="flex items-center gap-3 opacity-100 font-bold bg-white/10 p-3 rounded-xl">
+                            <i class="fas fa-user"></i> My Profile
+                        </a>
+                        <a href="#" class="flex items-center gap-3 opacity-60 hover:opacity-100 transition p-3">
+                            <i class="fas fa-search-location"></i> Find Donors
+                        </a>
+                        <a href="#" class="fas fa-bell flex items-center gap-3 opacity-60 hover:opacity-100 transition p-3">
+                            <span class="font-sans italic">Requests</span>
+                        </a>
+                    </nav>
                 </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-                <h3 class="text-sm font-black text-gray-400 uppercase tracking-widest mb-6">Contact & Location</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-500">Phone</span>
-                        <span class="font-bold text-gray-800">+1 234 567 890</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-500">Email</span>
-                        <span class="font-bold text-gray-800">john@example.com</span>
-                    </div>
-                    <div class="flex justify-between border-b pb-2">
-                        <span class="text-gray-500">Location</span>
-                        <span class="font-bold text-gray-800">New York, USA</span>
-                    </div>
-                </div>
+            <div class="pt-6 border-t border-white/10">
+                <a href="index.html" class="flex items-center gap-3 text-red-300 hover:text-white transition">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
             </div>
+        </aside>
 
-            <div class="md:col-span-2 bg-slate-800 rounded-3xl p-8 text-white">
-                <div class="flex items-center gap-4 mb-4">
-                    <i class="fas fa-history text-red-500 text-xl"></i>
-                    <h3 class="text-lg font-bold">Donation History</h3>
+        <main class="flex-1 p-6 md:p-12">
+            <header class="mb-10 flex justify-between items-center">
+                <h2 class="text-3xl font-black text-slate-800">Donor Dashboard</h2>
+                <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-xs font-bold uppercase">Ready to Donate</span>
+            </header>
+
+            <div class="max-w-3xl bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="bg-slate-50 p-6 border-b border-slate-100">
+                    <h3 class="font-bold text-slate-700">Registered Information</h3>
                 </div>
-                <div class="flex justify-between items-center">
-                    <p class="text-slate-400">Last Donation Date:</p>
-                    <p class="text-xl font-bold">November 12, 2025</p>
-                </div>
-                <div class="mt-6 p-4 bg-slate-700/50 rounded-xl text-sm border border-slate-600">
-                    <i class="fas fa-info-circle mr-2 text-blue-400"></i>
-                    Note: You must wait 90 days between whole blood donations.
+
+                <div class="divide-y divide-slate-50">
+                    
+                    <div class="flex flex-col md:flex-row md:items-center p-6 gap-2">
+                        <span class="w-48 text-xs font-black text-slate-400 uppercase tracking-widest">Full Name</span>
+                        <span class="text-lg font-bold text-slate-800">John Doe</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="flex flex-col p-6 gap-2 border-r border-slate-50">
+                            <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Email Address</span>
+                            <span class="font-semibold text-slate-700">john.doe@example.com</span>
+                        </div>
+                        <div class="flex flex-col p-6 gap-2">
+                            <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Phone Number</span>
+                            <span class="font-semibold text-slate-700">+1 (555) 000-1234</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="flex flex-col p-6 gap-2 border-r border-slate-50">
+                            <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Age</span>
+                            <span class="font-semibold text-slate-700">28 Years</span>
+                        </div>
+                        <div class="flex flex-col p-6 gap-2">
+                            <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Sex</span>
+                            <span class="font-semibold text-slate-700">Male</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-center p-6 gap-2">
+                        <span class="w-48 text-xs font-black text-slate-400 uppercase tracking-widest">Blood Group</span>
+                        <span class="px-4 py-1 bg-red-50 text-red-600 rounded-lg font-black text-xl border border-red-100">O Positive (O+)</span>
+                    </div>
+
+                    <div class="flex flex-col p-6 gap-2">
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Registered Location</span>
+                        <span class="font-semibold text-slate-700">123 Health Street, New York, NY 10001</span>
+                    </div>
+
+                    <div class="flex flex-col p-6 gap-2 bg-slate-50/50">
+                        <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Last Donation Date</span>
+                        <div class="flex items-center gap-3">
+                            <span class="font-bold text-slate-800">November 15, 2025</span>
+                            <span class="text-xs text-slate-400 font-medium italic">(Approx. 98 days ago)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
 </body>
 </html>
