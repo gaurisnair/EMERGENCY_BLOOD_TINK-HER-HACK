@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodConnect | Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white shadow-2xl rounded-3xl overflow-hidden max-w-4xl w-full flex flex-col md:flex-row border border-gray-100">
+        
+        <div class="bg-red-600 p-10 md:w-1/3 text-white flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-6">
+                <i class="fas fa-droplet text-4xl"></i>
+                <h1 class="text-2xl font-black tracking-tight">BloodConnect</h1>
+            </div>
+            <h2 class="text-3xl font-bold leading-tight">Your one drop can save a life.</h2>
+            <p class="mt-4 text-red-100 text-sm italic">Join our community of heroes today.</p>
+        </div>
+
+        <div class="p-10 md:w-2/3">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Register as a Donor</h3>
+            
+            <form id="regForm" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="md:col-span-2">
+                    <label class="text-xs font-bold text-gray-400 uppercase">Full Name</label>
+                    <input type="text" id="name" required class="w-full mt-1 p-3 bg-gray-50 border rounded-xl outline-none focus:border-red-500 transition">
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold text-gray-400 uppercase">Phone Number</label>
+                    <input type="tel" id="phone" required class="w-full mt-1 p-3 bg-gray-50 border rounded-xl outline-none focus:border-red-500">
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold text-gray-400 uppercase">Email ID</label>
+                    <input type="email" id="email" required class="w-full mt-1 p-3 bg-gray-50 border rounded-xl outline-none focus:border-red-500">
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold text-gray-400 uppercase">Age</label>
+                    <input type="number" id="age" required class="w-full mt-1 p-3 bg-gray-50 border rounded-xl outline-none focus:border-red-500">
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold text-gray-400 uppercase">Sex</label>
+                    <select id="sex" class="w-full mt-1 p-3 bg-gray-50 border rounded-xl outline-none focus:border-red-500">
+                        <option>Male</option><option>Female</option><option>Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold text-gray-400 uppercase">Blood Group</label>
+                    <select id="blood" class="w-full mt-1 p-3 bg-gray-50 border rounded-xl outline-none focus:border-red-500 font-bold text-red-600">
+                        <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                        <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-xs font-bold text-gray-400 uppercase">Last Donation Date</label>
+                    <input type="date" id="lastDate" class="w-full mt-1 p-3 bg-gray-50 border rounded-xl outline-none focus:border-red-500">
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="text-xs font-bold text-gray-400 uppercase">Location</label>
+                    <input type="text" id="location" required placeholder="City, State" class="w-full mt-1 p-3 bg-gray-50 border rounded-xl outline-none focus:border-red-500">
+                </div>
+
+                <button type="submit" class="md:col-span-2 mt-4 bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform active:scale-95">
+                    Submit Registration
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Simulating the submission and moving to dashboard
+        document.getElementById('regForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'donor.html';
+        });
+    </script>
+</body>
+</html>
