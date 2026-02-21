@@ -1,0 +1,62 @@
+const donorDataset = [
+  {
+    "id": "D001",
+    "name": "Arjun Mehta",
+    "age": 28,
+    "gender": "Male",
+    "bloodGroup": "O+",
+    "location": "Central Park Area",
+    "coordinates": { "lat": 19.0760, "lng": 72.8777 },
+    "contact": "+91 98765 43210",
+    "lastDonationDate": "2025-11-10",
+    "availabilityStatus": "Available"
+  },
+  {
+    "id": "D002",
+    "name": "Sara Khan",
+    "age": 32,
+    "gender": "Female",
+    "bloodGroup": "A-",
+    "location": "West End Mall",
+    "coordinates": { "lat": 19.0820, "lng": 72.8800 },
+    "contact": "+91 98765 43211",
+    "lastDonationDate": "2026-02-15",
+    "availabilityStatus": "Unavailable"
+  },
+  {
+    "id": "D003",
+    "name": "David Miller",
+    "age": 45,
+    "gender": "Male",
+    "bloodGroup": "O-",
+    "location": "Downtown Square",
+    "coordinates": { "lat": 19.0700, "lng": 72.8700 },
+    "contact": "+91 98765 43212",
+    "lastDonationDate": "2025-08-20",
+    "availabilityStatus": "Available"
+  },
+  {
+    "id": "D004",
+    "name": "Priya Sharma",
+    "age": 24,
+    "gender": "Female",
+    "bloodGroup": "B+",
+    "location": "University Campus",
+    "coordinates": { "lat": 19.0950, "lng": 72.8900 },
+    "contact": "+91 98765 43213",
+    "lastDonationDate": "2025-12-01",
+    "availabilityStatus": "Available"
+  },
+  {
+    "id": "D005",
+    "name": "Kevin Peterson",
+    "age": 30,
+    "gender": "Male",
+    "bloodGroup": "O+",
+    "location": "Airport Road",
+    "coordinates": { "lat": 19.1000, "lng": 72.8750 },
+    "contact": "+91 98765 43214",
+    "lastDonationDate": "2024-10-10",
+    "availabilityStatus": "Available"
+  }
+];
